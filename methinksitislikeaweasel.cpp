@@ -75,7 +75,7 @@ void generate_generation(progeny* parent, ofstream& outFile){
             highest_percent_match = p->percent_match;
             current_generation_parent = p;
         }
-        writeProgeny(outFile, i, p->progenyBody, p->percent_match);
+        writeProgeny(outFile, i+1, p->progenyBody, p->percent_match);
     }
 
     outFile <<"HIGHEST MATCHING PROGENY: "<<current_generation_parent->progenyBody<<"\n";
@@ -97,7 +97,7 @@ int main(){
 
     int choice = 1;
 
-    cout<<"1. Generate Next Generation"<<endl;
+    cout<<"1. START EVOLUTION"<<endl;
     cout<<"2. ABORT"<<endl;
     cin>>choice;
     
